@@ -1,0 +1,14 @@
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\bin\Debug\netcoreapp2.2\UserManagementAPI.deps.json
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\bin\Debug\netcoreapp2.2\UserManagementAPI.runtimeconfig.json
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\bin\Debug\netcoreapp2.2\UserManagementAPI.runtimeconfig.dev.json
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\bin\Debug\netcoreapp2.2\UserManagementAPI.dll
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.csprojAssemblyReference.cache
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.csproj.CoreCompileInputs.cache
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.RazorAssemblyInfo.cache
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.RazorAssemblyInfo.cs
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.AssemblyInfoInputs.cache
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.AssemblyInfo.cs
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.RazorTargetAssemblyInfo.cache
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\bin\Debug\netcoreapp2.2\UserManagementAPI.pdb
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.dll
+C:\Users\rohit\Desktop\UMAUpdated\UserManagementAPI\UserManagementAPI\UserManagementAPI\obj\Debug\netcoreapp2.2\UserManagementAPI.pdb
