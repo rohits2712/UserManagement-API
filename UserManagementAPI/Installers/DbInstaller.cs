@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using UserManagementAPI.Data;
 using UserManagementAPI.Services;
 
 namespace UserManagementAPI.Installers
@@ -13,9 +14,9 @@ namespace UserManagementAPI.Installers
     {
         public void InstallServices(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<DbContext>(
-                options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-            services.AddSingleton<IUserService, UserService>();
+            services.AddDbContext<AppDbContext>(
+                options => options.UseSqlServer(configuration.GetConnectionString("UserDatabaseConnection")));
+            services.AddScoped<IUserService, UserService>();
         }
     }
 }
