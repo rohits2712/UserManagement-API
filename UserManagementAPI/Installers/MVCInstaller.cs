@@ -16,10 +16,12 @@ namespace UserManagementAPI.Installers
     {
         public void InstallServices(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMvc().AddFluentValidation(mvcConfiguration => mvcConfiguration.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddMvc(options => options.Filters.Add<ValidationFilter>());
             services.AddSwaggerGen(x => { x.SwaggerDoc("v1", new Info() { Title = "UserManagment API", Version = "v1" }); });
+          
         }
     }
 }

@@ -1,0 +1,25 @@
+<mat-card>
+    <span>Create new user</span>
+    <form [formGroup] = "userForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="new-entry-field" >
+            <input matInput placeholder="User GivenName" formControlName="givenName" >
+        </mat-form-field>
+        <mat-form-field class="new-entry-field">
+            <input matInput placeholder="Surname" formControlName="surname">
+        </mat-form-field>
+        <mat-form-field class="new-entry-field">
+            <input matInput placeholder="Email Address" formControlName="emailAddress">
+        </mat-form-field>
+        <mat-form-field class="new-entry-field">
+            <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+        </mat-form-field>
+        <mat-form-field class="new-entry-field">
+               <mat-select placeholder = "Manager" formControlName="managerId">
+                   <mat-option *ngFor = "let type of types" [value] = "type.id" >
+                    {{type.displayName}}
+                   </mat-option>
+               </mat-select>
+        </mat-form-field>
+        <button mat-raised-button [disabled]= "!userForm.valid">Create new</button>
+    </form>
+</mat-card>

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ using UserManagementAPI.Services;
 
 namespace UserManagementAPI.Controllers
 {
+    //[EnableCors("AllowOrigin")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;
@@ -19,7 +22,7 @@ namespace UserManagementAPI.Controllers
         {
             _userService = userService;
         }
-
+                
         [HttpGet(ApiRoutes.Users.GetAll)]
         public async Task<IActionResult> Get()
         {
@@ -42,7 +45,12 @@ namespace UserManagementAPI.Controllers
             var user = new User
             {
                 Id = userId,
-                GivenName = request.GivenName
+                GivenName = request.GivenName,
+                Surname= request.Surname,
+                EmailAddress=request.EmailAddress,
+                PhoneNumber=request.PhoneNumber,
+                ManagerId =request.ManagerId
+
             };
             var updatedUser = await _userService.UpdateUserAsync(user);
 
@@ -53,8 +61,7 @@ namespace UserManagementAPI.Controllers
         }
 
         [HttpDelete(ApiRoutes.Users.Delete)]
-
-        public async Task<IActionResult> Delete([FromRoute] Guid guid)
+        public async Task<IActionResult> Delete([FromRoute]Guid guid)
         {
             var userdeleted = await _userService.DeleteUserAsync(guid);
             if (userdeleted) return NoContent();
@@ -67,18 +74,13 @@ namespace UserManagementAPI.Controllers
         {
             var user = new User
             {
-                Id = userPostRequest.Id,
+                Id = userPostRequest.Id == Guid.Empty ? Guid.NewGuid() : userPostRequest.Id,
                 GivenName = userPostRequest.GivenName,
                 Surname = userPostRequest.Surname,
                 EmailAddress = userPostRequest.EmailAddress,
                 ManagerId = userPostRequest.ManagerId,
                 PhoneNumber = userPostRequest.PhoneNumber
             };
-
-            //if (user.Id != Guid.Empty)
-                //user.Id = Guid.NewGuid();
-            //if (user.ManagerId != Guid.Empty)
-                //user.ManagerId = Guid.Parse("e20bb97f-e95b-4bb8-b0f9-a3bb333a2d3b");
 
             await _userService.CreateUserAsync(user);
 
