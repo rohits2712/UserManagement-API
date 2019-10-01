@@ -18,9 +18,7 @@ namespace UserManagementAPI.Data
         public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-
-            modelBuilder.Entity<User>().HasData(new User { Id = Guid.NewGuid(), GivenName = "Rohit", Surname = "Sharma", PhoneNumber = "4242", EmailAddress = "a@x.com" });
+        {           
             base.OnModelCreating(modelBuilder);
         }
     }
